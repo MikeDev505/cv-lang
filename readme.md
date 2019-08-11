@@ -10,8 +10,8 @@ Version 0.1
 - Why new language? Why not C? Why not C#? Why not Rust?
 - cv-lang is Code View Language
 - General assumptions for cv-lang
-- Simple examples
 - General language construct and concept
+- Simple examples
 
 ## Why new language?
 C is a fast and universal language (it can be used in embedded programming, programming without an operating system and user programming ..), but in my opinion it is difficult to create a secure application only in C-lang.
@@ -25,6 +25,7 @@ But why not more? What's with MVC (Model View Controller) in the user interface?
 
 ## cv-lang is Code View Language
 Simple case: we need a 100 class with 10 properties. 
+
 in C#
 ``` C#
 public class Class1
@@ -44,10 +45,66 @@ Why not use it in your code?
 
 in cv-lang
 ``` C#
-public class
+public class Class1
 {
   string Property1 - "some description of property"
   string Property2 - "some description of property"
 }
 ```
 The point is: "separate the model/code from the view"
+
+## General assumptions for cv-lang
+1. Object programming language
+2. Flexible syntax depending on the context:
+    * strong types by default, but in some context they can be dynamically
+    * pointesr may by userd in some contexts 
+    * GC can by disabled in some contexts and manual memory management can by used.
+3. Depend on JIT/VM.
+4. Generic types
+5. The code representation depends on the view.
+6. Everything is serialized
+
+## General language construct and concept
+1. Compilation time code - the user can add code that works during compilation.
+2. Everything is serialized - data, code and execution.
+    * Data serialization is simple and well known.
+    * Serialization of code is a kind of exchange of source code, expression, dynamic library creation, etc.
+    * Serialization of execution is a serialization of "Virtual Machine Status"
+3. Hardware operations depend on execution context.
+
+## Simple examples
+``` C#
+public void main()
+{
+  println("Hello world");
+}
+```
+
+Object serialization
+``` C#
+public class Person
+{
+  string Name {get;set;}
+  string Surname {get;set;}
+  
+  string SomeMethod(string someParam)
+  {
+    return someParam + " text";
+  }
+}
+
+public void main()
+{
+  var person = new Person();
+  println(person); 
+  
+  var stringWithSerialisationofObject = person.Serialize();
+  var newInstanceOfPerson = Object.Deserialize(stringWithSerialisationData);
+  
+  var stringWithSerialisationOfType = Object.Serialize(typeof(Person));
+  var newType = Object.Deserialize(stringWithSerialisationOfType);
+  var newTypeInstance = Type.Create<Interface/type>(newType, typ); 
+  dynamic d = newTypeInstance;
+  d.SomeMethode("sdf"); 
+}
+```
