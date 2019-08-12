@@ -25,3 +25,4 @@ Text
 * char - size depend on context - reprezent utf-8 or utf-32 char
 
 
+# Array
