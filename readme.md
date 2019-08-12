@@ -2,7 +2,7 @@
 Fast and elastic language inspired by C, C#, Rust - design concept.
 
 ## This is design concept for new language
-This document describes the function of the theoretical programming language. Some concepts may not be realized in real language.
+This document describes the function of the theoretical programming language. Language or/and some concepts may not be realized in real language. This is theoretically consideration.
 
 Version 0.1
 
@@ -37,6 +37,17 @@ public class Class1
   public string Property2 {get;set;}
   ...
 }
+
+public class Class2
+{
+  [Destriptions("some description of property")]
+  public string Property1 {get;set;}
+  
+  [Destriptions("some description of property")]
+  public string Property2 {get;set;}
+  ...
+}
+...
 ``` 
 Really? in the XXI century?
 When You creating an application - all the best practices say: "separate the model from the view". We create MVC, MVVM, MVP...
@@ -45,11 +56,20 @@ Why not use it in your code?
 
 in cv-lang
 ``` C#
-public class Class1
+class Class1
 {
   string Property1 - "some description of property"
   string Property2 - "some description of property"
+  ...
 }
+
+class Class2
+{
+  string Property1 - "some description of property"
+  string Property2 - "some description of property"
+  ...
+}
+...
 ```
 The point is: "separate the model/code from the view"
 
@@ -63,6 +83,7 @@ The point is: "separate the model/code from the view"
 4. Generic types
 5. The code representation depends on the view.
 6. Everything is serialized
+7. Meta-programming - Code generation before compile, execution in compile time
 
 ## General language construct and concept
 1. Compilation time code - the user can add code that works during compilation.
