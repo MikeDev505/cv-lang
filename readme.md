@@ -8,7 +8,7 @@ Version 0.1
 
 # General topic:
 - Why new language? Why not C? Why not C#? Why not Rust?
-- cv-lang is Code View Language
+- cv-lang is Code View Language, running on: microcontrollers, small processor, mobile, desktop and servers processor
 - General assumptions for cv-lang
 - General language construct and concept
 - Simple examples
@@ -74,18 +74,30 @@ class Class2
 The point is: "separate the model/code from the view"
 
 ## General assumptions for cv-lang
-1. Object programming language
-2. Flexible syntax depending on the context:
+1. Context
+    * The team includes experts, senior programmers, junior programmers and non-technical people.
+  Everyone has special needs. Experts want to create fast code, younger developers want to create working code, business people need to easily model business logic.
+  The language has to provide views and tools needed and understood by each of them
+    * There are places in the project where the frames of the technologies used (although they work perfectly well in most cases) are too   rigid. 
+  for example: generating UI from code, CRUD operation for administration objects etc.
+2. Heterogeneous computing. Should run on: microcontrollers, small processor, mobile, desktop and servers processor
+3. Object programming language
+4. Flexible syntax depending on the context:
     * strong types by default, but in some context they can be dynamically
     * pointesr may by userd in some contexts 
     * GC can by disabled in some contexts and manual memory management can by used.
-3. Depend on JIT/VM.
-4. Generic types
-5. The code representation depends on the view.
-6. Everything is serialized
-7. Meta-programming - Code generation before compile, execution in compile time
+5. Depend on JIT/VM.
+6. Generic types
+7. The code representation depends on the view.
+8. Everything is serialized
+9. Meta-programming - Code generation before compile, execution in compile time
 
 ## General language construct and concept
+1. Context:
+  * The team includes experts, senior programmers, junior programmers and non-technical people.
+  Everyone has special needs. Experts want to create fast code, younger developers want to create working code, business people need to easily model business logic. Language allow special view and 
+  * 
+  
 1. Compilation time code - the user can add code that works during compilation.
 2. Everything is serialized - data, code and execution.
     * Data serialization is simple and well known.
