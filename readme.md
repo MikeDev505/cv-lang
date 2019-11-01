@@ -1,5 +1,5 @@
 # cv-lang
-Fast and elastic language inspired by C, C#, Rust - design concept.
+Fast and elastic language inspired by C, C#, Java, Rust - design concept.
 
 ## This is design concept for new language
 This document describes the function of the theoretical programming language. Language or/and some concepts may not be realized in real language. This is theoretically consideration.
@@ -7,7 +7,7 @@ This document describes the function of the theoretical programming language. La
 Version 0.1
 
 # General topic:
-- Why new language? Why not C? Why not C#? Why not Rust?
+- Why new language? Why not C? Why not C#? Why not Java Why not Rust?
 - cv-lang is Code View Language, running on: microcontrollers, small processor, mobile, desktop and servers processor
 - General assumptions for cv-lang
 - General language construct and concept
