@@ -20,3 +20,5 @@ Version 0.2
 * Package manager 
 * Serialization
 * Virtual machne 
+* Compiler
+* IDE
