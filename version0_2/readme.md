@@ -22,3 +22,4 @@ Version 0.2
 * Virtual machne 
 * Compiler
 * IDE
+* Database
