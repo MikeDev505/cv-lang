@@ -1,9 +1,8 @@
 # cv-lang
 Fast and elastic language inspired by C, C#, Java, Rust - design concept.
+Version 0.2
 
-# version 0.2
-
-## General language assumptions
+# General language assumptions
 * The code representation depends on the view.
 * Object orintet language inspired by C#/Java
 * Context
@@ -17,3 +16,7 @@ Fast and elastic language inspired by C, C#, Java, Rust - design concept.
  * Heterogeneous computing -Should run on: microcontrollers, small processor, mobile, desktop and servers processor
  
  
+# Modules
+* Package manager 
+* Serialization
+* Virtual machne 
