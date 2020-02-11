@@ -19,7 +19,9 @@ Version 0.2
 # Modules
 * Package manager 
 * Serialization
-* Virtual machne 
+* Virtual machine (CvLang.VirtualMachines)
+ * DotNetVirtualMachine
+ * CvlVirtualMachine
 * Compiler
 * IDE
 * Database
